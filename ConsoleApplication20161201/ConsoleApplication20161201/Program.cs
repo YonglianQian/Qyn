@@ -30,7 +30,8 @@ namespace ConsoleApplication20161201
                     sum += i;
                 }
             }
-            Console.Write("总和{0}",sum);
+            Console.WriteLine("总和{0}",sum);
+            Console.ReadKey();
         }
     }
 }
