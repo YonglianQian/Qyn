@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,29 +10,14 @@ namespace ConsoleApplication20161201
 {
     class Program
     {
+        /// <summary>
+        /// 时间戳转为c#事件
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
-            int sum = 0;
-            for (int i = 2 ; i < 100; i++)
-            {
-                int k = 0;
-                for (int j = 2; j <= (int)Math.Sqrt(i); j++)
-                {
-                    if (i%j==0)
-                    {
-                        k++;
-                    }
-                }
-                if (k>0)
-                {
-                    continue;
-                }
-                else
-                {
-                    sum += i;
-                }
-            }
-            Console.WriteLine("总和{0}",sum);
+            Tools tool = new Tools();
+            Console.WriteLine(tool.convertCh("银行 行不行"));
             Console.ReadKey();
         }
     }
