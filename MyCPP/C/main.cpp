@@ -1,10 +1,13 @@
 #include<iostream>
+
+#pragma message("welcome to use pragma Message")
+#ifdef __cplusplus
+
+#endif // __cplusplus
+
 int main() {
-	int sum = 0;
-	for (int i = 0; i < 10; i++)
-	{
-		sum += i;
-	}
-	std::cout <<"Sum is"<<sum << std::endl;
+	printf("print some words \n");
+
+	system("pause");
 	return 0;
 }

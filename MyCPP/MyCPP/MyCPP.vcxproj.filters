@@ -21,7 +21,7 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Sales_data.h">
+    <ClInclude Include="MyCPP.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
