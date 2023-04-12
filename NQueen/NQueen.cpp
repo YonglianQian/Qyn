@@ -72,6 +72,12 @@ for (size_t i = 0; i < len; i++)
 std::cout<<std::endl;
     return true;
 }
+
+/// @brief 递归所有n个皇后的棋盘位置，当结果符合摆放，统计在sum中。
+/// @param qs 皇后的集合
+/// @param n 皇后的序号
+/// @param sum 摆放方案计数，避免使用全局变量
+/// @param a 棋盘的最大行列号，从1开始
 void SearchAllResult(std::vector<Queen>& qs, int n, int& sum, int a){
 for (size_t i = 0; i < a; i++)
 {
