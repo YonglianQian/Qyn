@@ -22,24 +22,23 @@ int gety() const{
 void print() const{
     std::cout<<"( "<<_x<<","<<_y<<" ) ";
 }
-};
-bool verify(const Queen &q1, const Queen &q2){
-    if (q1.getx()==q2.getx())
+bool verify(const Queen& q2) const{
+    if (_x==q2.getx())
     {
         return false;
     }
-    if (q1.gety()==q2.gety())
+    if (_y==q2.gety())
     {
         return false;
     }
-    if (abs(q1.getx()-q2.getx())==abs(q1.gety()-q2.gety()))
+    if (abs(_x-q2.getx())==abs(_y-q2.gety()))
     {
-    return false;
+        return false;
     }
     
     return true;
-
 }
+};
 void display(const Queen& q){
     q.print();
 }
@@ -49,7 +48,7 @@ for (size_t i = 0; i < len; i++)
 {
     for (size_t j =i+1; j < len; j++)
     {
-        if (!verify(qs[i],qs[j]))
+        if (!qs[i].verify(qs[j]))
         {
             return false;
         }
